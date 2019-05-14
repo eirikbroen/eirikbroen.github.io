@@ -168,7 +168,7 @@ dcat:DataDistributionService
 dcat:DataService
   rdf:type owl:Class ;
   rdfs:comment "A site or end-point for discovery, access or processing data or related resources." ;
-  rdfs:label "Data service" ;
+  rdfs:label "Data serviceZZZZZZZZZZZZZ" ;
   rdfs:subClassOf dctype:Service ;
   rdfs:subClassOf dcat:Resource ;
   rdfs:subClassOf [
