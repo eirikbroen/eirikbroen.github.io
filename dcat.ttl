@@ -193,58 +193,6 @@ dcat:API
   skos:changeNote "New class in this revision of DCAT" ;
   skos:editorialNote "Status: Class accepted by DCAT revision team, but details of definition and constraints not yet resolved." ;
 .
-dcat:DiscoveryService
-  rdf:type owl:Class ;
-  rdfs:comment "A site or end-point that supports data discovery, usually by providing access to catalogs of datasets and data services." ;
-  rdfs:label "Discovery Service" ;
-  rdfs:subClassOf dcat:DataDistributionService ;
-  rdfs:subClassOf [
-      rdf:type owl:Restriction ;
-      owl:onProperty dcat:servesDataset ;
-      owl:someValuesFrom dcat:Catalog ;
-    ] ;
-  skos:changeNote "New class in this revision of DCAT" ;
-  skos:editorialNote "Status: Class accepted by DCAT revision team, but details of definition and constraints not yet resolved." ;
-.
-dcat:Distribution
-  rdf:type rdfs:Class ;
-  rdf:type owl:Class ;
-  rdfs:comment """A specific representation of a dataset. A dataset might be available in several different forms,
-          and these forms might comprise both different serializations or different schematic arrangements of the same data.
-          Examples of distributions include a CSV file, a netCDF file, or a data-cube"""@en ;
-  rdfs:comment "Rappresenta una forma disponibile e specifica del dataset. Ciascun dataset può essere disponibile in forme differenti, che possono rappresentare formati diversi o diversi punti di accesso per un dataset. Esempi di distribuzioni sono un file CSV scaricabile, una API o un RSS feed."@it ;
-  rdfs:comment """Representa una forma disponible y específica de los datos. Cada conjunto de datos puede estar disponible en
-          formas diferentes, las cuáles pueden representar formatos diferentes del conjunto de datos o diferentes puntos de acceso."""@es ;
-  rdfs:comment "Reprezentuje konkrétní dostupnou formu datové sady. Každá datová sada může být dostupná v různých podobách, které mohou být reprezentovány různým formátem nebo různými přístupovými body. Příklady distribucí zahrnují CSV soubor ke stažení, API nebo RSS kanál"@cs ;
-  rdfs:comment """Représente une forme spécifique d'un jeu de données. Caque jeu de données peut être disponible
-          sous différentes formes, celles-ci pouvant représenter différents formats du jeu de données ou différents endpoint. Des exemples de distribution
-          sont des fichirs CSV, des API ou des flux RSS."""@fr ;
-  rdfs:comment """Αναπαριστά μία συγκεκριμένη διαθέσιμη μορφή ενός συνόλου δεδομένων. Κάθε σύνολο δεδομενων μπορεί να είναι διαθέσιμο σε
-          διαφορετικές μορφές, οι μορφές αυτές μπορεί να αναπαριστούν διαφορετικές μορφές αρχείων ή διαφορετικά σημεία διάθεσης.
-          Παραδείγματα διανομών συμπεριλαμβάνουν ένα μεταφορτώσιμο αρχείο μορφής CSV, ένα API ή ένα RSS feed."""@el ;
-  rdfs:comment "شكل محدد لقائمة البيانات يمكن الوصول إليه. قائمة بيانات ما يمكن أن تكون متاحه باشكال و أنواع متعددة.  ملف يمكن تحميله أو واجهة برمجية يمكن من خلالها الوصول إلى البيانات هي أمثلة على ذلك."@ar ;
-  rdfs:comment "データセットの特定の利用可能な形式を表わします。各データセットは、異なる形式で利用できることがあり、これらの形式は、データセットの異なる形式や、異なるエンドポイントを表わす可能性があります。配信の例には、ダウンロード可能なCSVファイル、API、RSSフィードが含まれます。"@ja ;
-  rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> ;
-  rdfs:label "Distribuce"@cs ;
-  rdfs:label "Distribución"@es ;
-  rdfs:label "Distribution"@en ;
-  rdfs:label "Distribution"@fr ;
-  rdfs:label "Distribuzione"@it ;
-  rdfs:label "Διανομή"@el ;
-  rdfs:label "التوزيع"@ar ;
-  rdfs:label "配信"@ja ;
-  skos:scopeNote """Ceci représente une disponibilité générale du jeu de données, et implique qu'il n'existe pas d'information
-          sur la méthode d'accès réelle des données, par exple, si c'est un lien de téléchargement direct ou à travers une page Web. """@fr ;
-  skos:scopeNote """Esto representa una disponibilidad general de un conjunto de datos, e implica que no existe información acerca
-          del método de acceso real a los datos, i.e., si es un enlace de descarga directa o a través de una página Web."""@es ;
-  skos:scopeNote "Questa classe rappresenta una disponibilità generale di un dataset e non implica alcuna informazione sul metodo di accesso effettivo ai dati, ad esempio se si tratta di un accesso a download diretto, API, o attraverso una pagina Web. L'utilizzo della proprietà dcat:downloadURL indica distribuzioni direttamente scaricabili."@it ;
-  skos:scopeNote """This represents a general availability of a dataset it implies no information about the
-          actual access method of the data, i.e. whether by direct download, API, or through a Web page.
-          The use of dcat:downloadURL property indicates directly downloadable distributions."""@en ;
-  skos:scopeNote """Αυτό αναπαριστά μία γενική διαθεσιμότητα ενός συνόλου δεδομένων και δεν υπονοεί τίποτα περί του πραγματικού τρόπου πρόσβασης στα δεδομένα, αν είναι άμεσα μεταφορτώσιμα,
-            μέσω API ή μέσω μίας ιστοσελίδας. Η χρήση της ιδιότητας dcat:downloadURL δείχνει μόνο άμεσα μεταφορτώσιμες διανομές."""@el ;
-  skos:scopeNote "これは、データセットの一般的な利用可能性を表わし、データの実際のアクセス方式に関する情報（つまり、直接ダウンロードなのか、APIなのか、ウェブページを介したものなのか）を意味しません。dcat:downloadURLプロパティーの使用は、直接ダウンロード可能な配信を意味します。"@ja ;
-.
 dcat:Resource
   rdf:type owl:Class ;
   rdfs:comment "Resource published or curated by a single agent" ;
@@ -384,31 +332,6 @@ dcat:contactPoint
   rdfs:label "عنوان اتصال"@ar ;
   rdfs:label "窓口"@ja ;
   rdfs:range v:Kind ;
-  skos:editorialNote "Status: English Definition text modified by DCAT revision team, translations pending." ;
-.
-dcat:distribution
-  rdf:type rdf:Property ;
-  rdf:type owl:ObjectProperty ;
-  rdfs:comment "Collega un dataset ad una delle sue distribuzioni disponibili."@it ;
-  rdfs:comment "Conecta un conjunto de datos a una de sus distribuciones disponibles"@es ;
-  rdfs:comment "Connecte un jeu de données à des distributions disponibles."@fr ;
-  rdfs:comment "An available distribution of the dataset."@en ;
-  rdfs:comment "Propojuje datovou sadu a jednu z jejích dostupných distribucí."@cs ;
-  rdfs:comment "Συνδέει ένα σύνολο δεδομένων με μία από τις διαθέσιμες διανομές του."@el ;
-  rdfs:comment "تربط قائمة البيانات بطريقة أو بشكل يسمح  الوصول الى البيانات"@ar ;
-  rdfs:comment "データセットを、その利用可能な配信に接続します。"@ja ;
-  rdfs:domain dcat:Dataset ;
-  rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> ;
-  rdfs:label "distribuce"@cs ;
-  rdfs:label "distribución"@es ;
-  rdfs:label "distribution"@en ;
-  rdfs:label "distribution"@fr ;
-  rdfs:label "distribuzione"@it ;
-  rdfs:label "διανομή"@el ;
-  rdfs:label "توزيع"@ar ;
-  rdfs:label "データセット配信"@ja ;
-  rdfs:range dcat:Distribution ;
-  rdfs:subPropertyOf dct:relation ;
   skos:editorialNote "Status: English Definition text modified by DCAT revision team, translations pending." ;
 .
 dcat:downloadURL
@@ -573,15 +496,6 @@ dcat:record
   rdfs:range dcat:CatalogRecord ;
   skos:editorialNote "Status: English Definition text modified by DCAT revision team, translations pending." ;
 .
-#dcat:servesDataset
-#  rdf:type owl:ObjectProperty ;
-#  rdfs:comment "A collection of data that this DataDistributionService can distribute" ;
-#  rdfs:domain dcat:DataDistributionService ;
-#  rdfs:label "serves dataset" ;
-#  rdfs:range dcat:Dataset ;
-#  skos:changeNote "New property in this revision of DCAT" ;
-#  skos:editorialNote "Status: Property accepted by DCAT revision team, but details of definition and constraints not yet resolved." ;
-#.
 dcat:service
   rdf:type owl:ObjectProperty ;
   rdfs:comment "A site or endpoint that is listed in the catalog" ;
