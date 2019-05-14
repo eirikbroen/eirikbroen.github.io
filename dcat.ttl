@@ -83,7 +83,6 @@ dcat:Catalog
   rdfs:label "Κατάλογος"@el ;
   rdfs:label "فهرس قوائم البيانات"@ar ;
   rdfs:label "カタログ"@ja ;
-  rdfs:subClassOf dcat:Dataset ;
   rdfs:subClassOf [
       rdf:type owl:Restriction ;
       owl:allValuesFrom dcat:Resource ;
@@ -193,43 +192,6 @@ dcat:API
     ] ;
   skos:changeNote "New class in this revision of DCAT" ;
   skos:editorialNote "Status: Class accepted by DCAT revision team, but details of definition and constraints not yet resolved." ;
-.
-dcat:Dataset
-  rdf:type rdfs:Class ;
-  rdf:type owl:Class ;
-  rdfs:comment "1つのエージェントによって公開またはキュレートされ、1つ以上の形式でアクセスまたはダウンロードできるデータの集合。"@ja ;
-  rdfs:comment "A collection of data, published or curated by a single source, and available for access or download in one or more formats"@en ;
-  rdfs:comment "Kolekce dat poskytovaná či řízená jedním zdrojem, která je k dispozici pro přístup či stažení v jednom či více formátech"@cs ;
-  rdfs:comment "Raccolta di dati, pubblicati o curati da un'unica fonte, disponibili per l'accesso o il download in uno o più formati."@it ;
-  rdfs:comment "Una colección de datos, publicados o conservados por una única fuente, y disponibles para ser accedidos o descargados en uno o más formatos"@es ;
-  rdfs:comment "Une collection de données, publiée ou élaborée par une seule source, et disponible pour accès ou téléchargement dans un ou plusieurs formats"@fr ;
-  rdfs:comment "Μία συλλογή από δεδομένα, δημοσιευμένη ή επιμελημένη από μία και μόνο πηγή, διαθέσιμη δε προς πρόσβαση ή μεταφόρτωση σε μία ή περισσότερες μορφές"@el ;
-  rdfs:comment "قائمة بيانات منشورة أو مجموعة من قبل مصدر ما و متاح الوصول إليها أو تحميلها"@ar ;
-  rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> ;
-  rdfs:label "Conjunto de datos"@es ;
-  rdfs:label "Dataset"@en ;
-  rdfs:label "Dataset"@it ;
-  rdfs:label "Datová sada"@cs ;
-  rdfs:label "Jeu de données"@fr ;
-  rdfs:label "Σύνολο Δεδομένων"@el ;
-  rdfs:label "قائمة بيانات"@ar ;
-  rdfs:label "データセット"@ja ;
-  rdfs:subClassOf dcat:Resource ;
-  skos:changeNote "2018-02 - subclass of dctype:Dataset removed because scope of dcat:Dataset includes several other types from the dctype vocabulary. " ;
-  skos:scopeNote """Cette classe représente le jeu de données publié par le fournisseur de données. Dans les cas où une distinction est nécessaire entre le jeu de donénes et son
-            entrée dans le catalogue, la classe registre de données peut être utilisée pour ce dernier. """@fr ;
-  skos:scopeNote """Esta clase representa el conjunto de datos publicados. En los casos donde es necesario distinguir entre el
-          conjunto de datos y su entrada en el catálogo de datos, se debe utilizar la clase 'registro de catálogo'."""@es ;
-  skos:scopeNote "Questa classe rappresenta il dataset come pubblicato dall’editore. Nel caso in cui sia necessario operare  una distinzione fra i metadati originali del dataset e il record dei metadati ad esso associato nel catalogo (ad esempio, per distinguere la data di modifica del dataset da quella del dataset nel catalogo) si può impiegare la classe catalog record."@it ;
-  skos:scopeNote "Tato třída reprezentuje datovou sadu tak, jak je publikována poskytovatelem dat. V případě potřeby rozlišení datové sady a jejího záznamu v katalogu (jelikož metadata jako datum modifikace se mohou lišit) pro něj může být použita třída \"záznam v katalogu\"."@cs ;
-  skos:scopeNote """This class represents the actual dataset as published by the dataset publisher. In
-          cases where a distinction between the actual dataset and its entry in the catalog is
-          necessary (because metadata such as modification date and maintainer might differ), the
-          catalog record class can be used for the latter."""@en ;
-  skos:scopeNote """Η κλάση αυτή αναπαριστά το σύνολο δεδομένων αυτό καθ'εαυτό, όπως έχει δημοσιευθεί από τον εκδότη.
-          Σε περιπτώσεις όπου είναι απαραίτητος ο διαχωρισμός μεταξύ του συνόλου δεδομένων και της καταγραφής αυτού στον κατάλογο (γιατί μεταδεδομένα όπως η ημερομηνία αλλαγής και ο συντηρητής μπορεί να διαφέρουν)
-          η κλάση της καταγραφής καταλόγου μπορεί να χρησιμοποιηθεί για το τελευταίο."""@el ;
-  skos:scopeNote "このクラスは、データセットの公開者が公開する実際のデータセットを表わします。カタログ内の実際のデータセットとそのエントリーとの区別が必要な場合（修正日と維持者などのメタデータが異なるかもしれないので）は、後者にcatalog recordというクラスを使用できます。"@ja ;
 .
 dcat:DiscoveryService
   rdf:type owl:Class ;
@@ -424,32 +386,6 @@ dcat:contactPoint
   rdfs:range v:Kind ;
   skos:editorialNote "Status: English Definition text modified by DCAT revision team, translations pending." ;
 .
-dcat:dataset
-  rdf:type rdf:Property ;
-  rdf:type owl:ObjectProperty ;
-  rdfs:comment "Collega un catalogo ad un dataset che è parte del catalogo."@it ;
-  rdfs:comment "Enlaza un catálogo a un conjunto de datos que es parte de ese catálogo"@es ;
-  rdfs:comment "A collection of data that is listed in the catalog."@en ;
-  rdfs:comment "Propojuje katalog a datovou sadu, která je součástí tohoto katalogu."@cs ;
-  rdfs:comment "Relie un catalogue à un jeu de données faisant partie de ce catalogue"@fr ;
-  rdfs:comment "Συνδέει έναν κατάλογο με ένα σύνολο δεδομένων το οποίο ανήκει στον εν λόγω κατάλογο."@el ;
-  rdfs:comment "تربط الفهرس بقائمة بيانات ضمنه"@ar ;
-  rdfs:comment "カタログの一部であるデータセット。"@ja ;
-  rdfs:domain dcat:Catalog ;
-  rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/> ;
-  rdfs:label "conjunto de datos"@es ;
-  rdfs:label "dataset"@en ;
-  rdfs:label "dataset"@it ;
-  rdfs:label "datová sada"@cs ;
-  rdfs:label "jeu de données"@fr ;
-  rdfs:label "σύνολο δεδομένων"@el ;
-  rdfs:label "قائمة بيانات"@ar ;
-  rdfs:label "データセット"@ja ;
-  rdfs:range dcat:Dataset ;
-  rdfs:subPropertyOf dct:hasPart ;
-  rdfs:subPropertyOf rdfs:member ;
-  skos:editorialNote "Status: English Definition text modified by DCAT revision team, translations pending." ;
-.
 dcat:distribution
   rdf:type rdf:Property ;
   rdf:type owl:ObjectProperty ;
@@ -637,15 +573,15 @@ dcat:record
   rdfs:range dcat:CatalogRecord ;
   skos:editorialNote "Status: English Definition text modified by DCAT revision team, translations pending." ;
 .
-dcat:servesDataset
-  rdf:type owl:ObjectProperty ;
-  rdfs:comment "A collection of data that this DataDistributionService can distribute" ;
-  rdfs:domain dcat:DataDistributionService ;
-  rdfs:label "serves dataset" ;
-  rdfs:range dcat:Dataset ;
-  skos:changeNote "New property in this revision of DCAT" ;
-  skos:editorialNote "Status: Property accepted by DCAT revision team, but details of definition and constraints not yet resolved." ;
-.
+#dcat:servesDataset
+#  rdf:type owl:ObjectProperty ;
+#  rdfs:comment "A collection of data that this DataDistributionService can distribute" ;
+#  rdfs:domain dcat:DataDistributionService ;
+#  rdfs:label "serves dataset" ;
+#  rdfs:range dcat:Dataset ;
+#  skos:changeNote "New property in this revision of DCAT" ;
+#  skos:editorialNote "Status: Property accepted by DCAT revision team, but details of definition and constraints not yet resolved." ;
+#.
 dcat:service
   rdf:type owl:ObjectProperty ;
   rdfs:comment "A site or endpoint that is listed in the catalog" ;
