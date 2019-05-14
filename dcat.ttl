@@ -168,7 +168,7 @@ dcat:DataDistributionService
 dcat:DataService
   rdf:type owl:Class ;
   rdfs:comment "A site or end-point for discovery, access or processing data or related resources." ;
-  rdfs:label "Data serviceZZZZZZZZZZZZZ" ;
+  rdfs:label "Data service" ;
   rdfs:subClassOf dctype:Service ;
   rdfs:subClassOf dcat:Resource ;
   rdfs:subClassOf [
@@ -651,7 +651,7 @@ dcat:service
   rdfs:comment "A site or endpoint that is listed in the catalog" ;
   rdfs:domain dcat:Catalog ;
   rdfs:label "service" ;
-  rdfs:range dcat:DataService ;
+  rdfs:range dcat:API ;
   rdfs:subPropertyOf dct:hasPart ;
   rdfs:subPropertyOf rdfs:member ;
   skos:changeNote "New property in this revision of DCAT" ;
